@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInitSettings
 {
     public static $prefixLengthsPsr4 = array (
-        'O' => 
+        'O' =>
         array (
             'OCA\\Settings\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'OCA\\Settings\\' => 
+        'OCA\\Settings\\' =>
         array (
             0 => __DIR__ . '/..' . '/../lib',
         ),
@@ -44,6 +44,7 @@ class ComposerStaticInitSettings
         'OCA\\Settings\\Controller\\TwoFactorSettingsController' => __DIR__ . '/..' . '/../lib/Controller/TwoFactorSettingsController.php',
         'OCA\\Settings\\Controller\\UsersController' => __DIR__ . '/..' . '/../lib/Controller/UsersController.php',
         'OCA\\Settings\\Controller\\WebAuthnController' => __DIR__ . '/..' . '/../lib/Controller/WebAuthnController.php',
+        'OCA\\Settings\\Events\\BeforeTemplateRenderedEvent' => __DIR__ . '/..' . '/../lib/Events/LoadAdditionalScriptsEvent.php',
         'OCA\\Settings\\Hooks' => __DIR__ . '/..' . '/../lib/Hooks.php',
         'OCA\\Settings\\Mailer\\NewUserMailHelper' => __DIR__ . '/..' . '/../lib/Mailer/NewUserMailHelper.php',
         'OCA\\Settings\\Middleware\\SubadminMiddleware' => __DIR__ . '/..' . '/../lib/Middleware/SubadminMiddleware.php',
