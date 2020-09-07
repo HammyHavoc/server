@@ -507,6 +507,12 @@ class AmazonS3 extends \OC\Files\Storage\Common {
 		switch ($mode) {
 			case 'r':
 			case 'rb':
+				// Don't try to fetch empty files
+				$stat = $this->stat($path);
+				if (is_array($stat) && isset($stat['size']) && $stat['size'] === '0') {
+					return fopen('php://memory', $mode);
+				}
+
 				try {
 					return $this->readObject($path);
 				} catch (S3Exception $e) {
